@@ -1,5 +1,6 @@
 <?php
 
+use Faker\Guesser\Name;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,3 +51,11 @@ Route::get('cards', function () {
 Route::get('charts', function () {
     return view('charts');
 });
+Route::get('categories', function () {
+    return view('categories.index');
+})->name('categories');
+Route::get('categories/update', function () {
+    return view('categories.update');
+});
+
+
